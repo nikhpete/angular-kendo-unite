@@ -1,0 +1,15 @@
+$primary: #ff69b4;
+
+@import "~@progress/kendo-theme-material/dist/all.scss";
+
+.k-block{
+    .k-button-flat-base {
+        color: #ff69b4;
+    }
+    .k-button-flat-base:hover{
+        color: green;
+    }
+}
+.k-button-solid-primary{
+    background-color: #ff69b4;
+}

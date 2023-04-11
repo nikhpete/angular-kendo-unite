@@ -1,0 +1,12 @@
+<div @todoAnimations>
+    <h1>What should i do today?</h1>
+    <input kendoTextBox type="text" placeholder="Add a Todo-Item"
+    class="new-todo-input" #itemInput (keyup.enter)="addTodo(itemInput)" >
+    <div *ngIf="todos" class="list-group">
+        <button kendoButton @todoItem class="todo"
+        *ngFor="let todo of todos; index as i">
+            <span (click)="removeTodo(i)" >{{todo.item}}</span>
+        </button>
+    </div>
+</div>
+<div class="finished-list" *ngIf="todos.length == 0">All Done</div>
